@@ -1,0 +1,24 @@
+name:                HFPTest
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/Tritlo/HFPTest#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Matthías Páll Gissurarson
+maintainer:          mpg@fronkensteen.com
+copyright:           Matthías Páll Gissurarson
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+executable HFPTest.so
+  hs-source-dirs:      src
+  main-is:             HFPTest.hs
+  extra-libraries:     HSrts-ghc8.0.2
+  ghc-options:         -fPIC -dynamic -shared -no-hs-main
+  build-depends:       base
+                    ,  call-haskell-from-anything >= 1.1.0.0 && < 1.2.0.0
+  default-language:    Haskell2010
+
