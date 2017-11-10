@@ -17,6 +17,7 @@ executable HFPTest.so
   hs-source-dirs:      src
   main-is:             HFPTest.hs
   extra-libraries:     HSrts-ghc8.0.2
+  ld-options:          -Wl,-rpath,.,-rpath,/lib/
   ghc-options:         -fPIC -dynamic -shared -no-hs-main
   build-depends:       base
                     ,  call-haskell-from-anything >= 1.1.0.0 && < 1.2.0.0
